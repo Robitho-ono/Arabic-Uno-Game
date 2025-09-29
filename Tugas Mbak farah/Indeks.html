@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Arabic UNO Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Menu Utama -->
+  <div id="menuScreen" class="screen active">
+    <h1>Arabic UNO</h1>
+    <label>Pilih Level:</label>
+    <select id="levelSelect">
+      <option value="1">Level 1 - Angka Arab</option>
+      <option value="2">Level 2 - Angka + Huruf Dasar</option>
+      <option value="3">Level 3 - Angka + Huruf Lengkap</option>
+    </select>
+
+    <label>Jumlah Pemain:</label>
+    <select id="playerSelect">
+      <option value="2">2 Pemain</option>
+      <option value="3">3 Pemain</option>
+      <option value="4">4 Pemain</option>
+    </select>
+
+    <button id="startBtn">Mulai Game</button>
+  </div>
+
+  <!-- Game Board -->
+  <div id="gameScreen" class="screen">
+    <h2 id="turnInfo">Giliran Pemain</h2>
+
+    <div class="board">
+      <div id="discardPile" class="pile"></div>
+      <div id="drawPile" class="pile">
+        <img src="assets/deck.png" alt="Draw Deck" class="card-back">
+      </div>
+    </div>
+
+    <div id="playerHands"></div>
+
+    <div id="scoreBoard">
+      <h3>Skor</h3>
+      <ul id="scoreList"></ul>
+    </div>
+  </div>
+
+  <script src="utils.js"></script>
+  <script src="cards.js"></script>
+  <script src="game.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
